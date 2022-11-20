@@ -1,13 +1,17 @@
 package model;
 
-
-import interfaces.AbstractMusician;
 import interfaces.IInstrument;
+
+/**
+ * The RefinedAbstraction part of the Bridge Pattern. A concrete implementation of the
+ * abstraction. We can further refine by creating a ProMusician class
+ */
 
 public class BasicMusician extends AbstractMusician
 {
-    protected IInstrument instrument;
-
+    /**
+     * @param instrument the bridge
+     */
     public BasicMusician(IInstrument instrument)
     {
         this.instrument = instrument;

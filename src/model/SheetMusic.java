@@ -2,6 +2,9 @@ package model;
 
 import java.util.List;
 
+/**
+ * Helper class -> just stores a "song" in an ArrayList of notes
+ */
 public class SheetMusic
 {
     private List<String> sheet;
