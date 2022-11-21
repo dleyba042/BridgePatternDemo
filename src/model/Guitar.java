@@ -1,33 +1,41 @@
 package model;
 
-import interfaces.IInstrument;
-
 /**
- * A concrete bridge interface implementer.
- * This would be like the API reference in our real world example.
+ * This is a class that we need a bridge to, in order to use in our musician class
  */
-public class Guitar implements IInstrument
+
+public class Guitar
 {
     protected int volume = 0;
     protected String effect = "Neutral";
 
-
-    @Override
-    public void playNote(String note)
+    public void pluckString(String note)
     {
-        System.out.printf("\nStrummed the " + note + " on the Guitar at a volume of %d ",volume);
-        //TODO maybe we can add something here to harness any sound effects -> FOR SET EFFECT
+        System.out.printf("\nPlucked the " + note + " note on the Guitar at a volume of %d",volume);
+        if(!effect.equals("Neutral"))
+        {
+            System.out.printf(" with a %s effect!\n",effect);
+        }
     }
 
-    @Override
-    public void setVolume(int volume)
+    public void adjustVolumeKnob(int volume)
     {
         this.volume = volume;
     }
 
-    @Override
-    public void tuneUp()
+    public void adjustTuningPegs()
     {
         System.out.println("Adjusted the guitar tuning pegs");
+    }
+
+    public void bendNote(String note,int steps)
+    {
+        pluckString(note);
+        System.out.printf(" and bent by %s steps!",steps);
+    }
+
+    public void setEffect(String effect)
+    {
+        this.effect = effect;
     }
 }

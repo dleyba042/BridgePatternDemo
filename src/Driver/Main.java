@@ -13,11 +13,11 @@ import java.util.List;
  */
 public class Main
 {
-    //TODO implement the missing interface methods
 
-    //TODO Implement a ProGuitarist class that uses these methods
-
-    //TODO add a NEW class that can use the IInstrument interface
+    //TODO implement the GuitarBridge
+    //TODO Implement a ProGuitarist class that uses the more advanced guitar methods,
+    // to show extension in the platform independent dimension
+    //TODO add a PianoBridge class to show extension in the specific implementation dimension
 
     /**
      * Test classes
@@ -26,11 +26,15 @@ public class Main
     public static void main(String[] args)
     {
         SheetMusic song = new SheetMusic(List.of("a","g","b","c"));
-        BasicMusician musician = new BasicMusician(new Guitar());
+        //TODO fix this before you can run
+        /*
+        BasicMusician musician = new BasicMusician(new GuitarBridge(new Guitar()));
 
         System.out.println();
         musician.checkTuning();
         musician.adjustInstrumentVolume(3);
         musician.playSong(song);
+
+         */
     }
 }
